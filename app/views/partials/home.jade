@@ -1,0 +1,7 @@
+section.home-view
+  .wrapper
+    h1 {{appName}}
+
+    ul.nav
+      li(ng-repeat="item in collections track by $index")
+        a(ui-sref="hadith.bookid({collection: item.code, book_id: item.first_book})") {{item.title_en}}

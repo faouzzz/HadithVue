@@ -1,0 +1,28 @@
+footer
+  .container
+    .prev
+      span(ng-if="info.book.prev" ng-init="book=info.book.prev")
+        a(ng-href="{{book.link}}" back-top)
+          fa(name="chevron-left")
+          | &nbsp;
+          span.pill(ng-if="book.part_num") Part {{book.part_num}}
+          | &nbsp;
+          span(ng-bind-html="book.book_name")
+
+    .info
+      //- a.pill(href="#" back-top)
+      //-   | Top&nbsp;
+      //-   fa(name="chevron-up")
+
+      span.pill-info
+        span(ng-show="hadith.busy") Loading...
+        span(ng-show="!hadith.busy") {{hadith.loaded}} of {{hadith.total}} loaded
+
+    .next
+      span(ng-if="info.book.next" ng-init="book=info.book.next")
+        a(ng-href="{{book.link}}" back-top)
+          span.pill(ng-if="book.part_num") Part {{book.part_num}}
+          | &nbsp;
+          span(ng-bind-html="book.book_name")
+          | &nbsp;
+          fa(name="chevron-right")

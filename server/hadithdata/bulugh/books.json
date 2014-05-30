@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "english": "The Book of Purification",
+      "arabic": "كتاب الطهارة"
+    }
+  },
+  {
+    "id": "3",
+    "title": {
+      "english": "Funerals",
+      "arabic": "كتاب الجنائز"
+    }
+  },
+  {
+    "id": "4",
+    "title": {
+      "english": "The Book of Zakah",
+      "arabic": "كتاب الزكاة"
+    }
+  },
+  {
+    "id": "5",
+    "title": {
+      "english": "Fasting",
+      "arabic": "كتاب الصيام"
+    }
+  },
+  {
+    "id": "6",
+    "title": {
+      "english": "Hajj",
+      "arabic": "كتاب الحج"
+    }
+  },
+  {
+    "id": "9",
+    "title": {
+      "english": "Crimes (Qisas or Retaliation)",
+      "arabic": "كتاب الجنايات"
+    }
+  },
+  {
+    "id": "10",
+    "title": {
+      "english": "Hudud",
+      "arabic": "كتاب الحدود"
+    }
+  },
+  {
+    "id": "11",
+    "title": {
+      "english": "Jihad",
+      "arabic": "كتاب الجهاد"
+    }
+  },
+  {
+    "id": "12",
+    "title": {
+      "english": "Food",
+      "arabic": "كتاب الأطعمة"
+    }
+  },
+  {
+    "id": "15",
+    "title": {
+      "english": "Emancipation",
+      "arabic": "كتاب العتق"
+    }
+  },
+  {
+    "id": "16",
+    "title": {
+      "english": "The Comprehensive Book",
+      "arabic": "كتاب الجامع"
+    }
+  }
+]

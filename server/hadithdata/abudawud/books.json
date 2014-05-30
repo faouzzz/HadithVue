@@ -1,0 +1,303 @@
+[
+  {
+    "id": "1",
+    "title": {
+      "english": "Purification (Kitab Al-Taharah)",
+      "arabic": " كتاب الطهارة "
+    }
+  },
+  {
+    "id": "2",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat)",
+      "arabic": " كتاب الصلاة"
+    }
+  },
+  {
+    "id": "3",
+    "title": {
+      "english": "The Book Of The Prayer For Rain (Kitab al-Istisqa')",
+      "arabic": " كتاب الاستسقاء "
+    }
+  },
+  {
+    "id": "4",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat): Detailed Rules of Law about the Prayer during Journey",
+      "arabic": " كتاب صلاة السفر "
+    }
+  },
+  {
+    "id": "5",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat): Voluntary Prayers",
+      "arabic": " كتاب التطوع "
+    }
+  },
+  {
+    "id": "6",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat): Detailed Injunctions about Ramadan",
+      "arabic": " كتاب شهر رمضان "
+    }
+  },
+  {
+    "id": "7",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat): Prostration while reciting the Qur'an",
+      "arabic": " كتاب سجود القرآن "
+    }
+  },
+  {
+    "id": "8",
+    "title": {
+      "english": "Prayer (Kitab Al-Salat): Detailed Injunctions about Witr",
+      "arabic": " كتاب الوتر "
+    }
+  },
+  {
+    "id": "9",
+    "title": {
+      "english": "Zakat (Kitab Al-Zakat)",
+      "arabic": " كتاب الزكاة "
+    }
+  },
+  {
+    "id": "10",
+    "title": {
+      "english": "The Book of Lost and Found Items",
+      "arabic": " كتاب اللقطة "
+    }
+  },
+  {
+    "id": "11",
+    "title": {
+      "english": "The Rites of Hajj (Kitab Al-Manasik Wa'l-Hajj)",
+      "arabic": " كتاب المناسك "
+    }
+  },
+  {
+    "id": "12",
+    "title": {
+      "english": "Marriage (Kitab Al-Nikah)",
+      "arabic": " كتاب النكاح "
+    }
+  },
+  {
+    "id": "13",
+    "title": {
+      "english": "Divorce (Kitab Al-Talaq)",
+      "arabic": " كتاب الطلاق "
+    }
+  },
+  {
+    "id": "14",
+    "title": {
+      "english": "Fasting (Kitab Al-Siyam)",
+      "arabic": " كتاب الصوم "
+    }
+  },
+  {
+    "id": "15",
+    "title": {
+      "english": "Jihad (Kitab Al-Jihad)",
+      "arabic": " كتاب الجهاد "
+    }
+  },
+  {
+    "id": "16",
+    "title": {
+      "english": "Sacrifice (Kitab Al-Dahaya)",
+      "arabic": " كتاب الضحايا "
+    }
+  },
+  {
+    "id": "17",
+    "title": {
+      "english": "Game (Kitab Al-Said)",
+      "arabic": " كتاب الصيد "
+    }
+  },
+  {
+    "id": "18",
+    "title": {
+      "english": "Wills (Kitab Al-Wasaya)",
+      "arabic": " كتاب الوصايا "
+    }
+  },
+  {
+    "id": "19",
+    "title": {
+      "english": "Shares of Inheritance (Kitab Al-Fara'id)",
+      "arabic": " كتاب الفرائض "
+    }
+  },
+  {
+    "id": "20",
+    "title": {
+      "english": "Tribute, Spoils, and Rulership (Kitab Al-Kharaj, Wal-Fai' Wal-Imarah)",
+      "arabic": " كتاب الخراج والإمارة والفىء "
+    }
+  },
+  {
+    "id": "21",
+    "title": {
+      "english": "Funerals (Kitab Al-Jana'iz)",
+      "arabic": " كتاب الجنائز "
+    }
+  },
+  {
+    "id": "22",
+    "title": {
+      "english": "Oaths and Vows (Kitab Al-Aiman Wa Al-Nudhur)",
+      "arabic": " كتاب الأيمان والنذور "
+    }
+  },
+  {
+    "id": "23",
+    "title": {
+      "english": "Commercial Transactions (Kitab Al-Buyu)",
+      "arabic": " كتاب البيوع "
+    }
+  },
+  {
+    "id": "24",
+    "title": {
+      "english": "Wages (Kitab Al-Ijarah)",
+      "arabic": " كتاب الإجارة "
+    }
+  },
+  {
+    "id": "25",
+    "title": {
+      "english": "The Office of the Judge (Kitab Al-Aqdiyah)",
+      "arabic": " كتاب الأقضية "
+    }
+  },
+  {
+    "id": "26",
+    "title": {
+      "english": "Knowledge (Kitab Al-Ilm)",
+      "arabic": " كتاب العلم "
+    }
+  },
+  {
+    "id": "27",
+    "title": {
+      "english": "Drinks (Kitab Al-Ashribah)",
+      "arabic": " كتاب الأشربة "
+    }
+  },
+  {
+    "id": "28",
+    "title": {
+      "english": "Foods (Kitab Al-At'imah)",
+      "arabic": " كتاب الأطعمة "
+    }
+  },
+  {
+    "id": "29",
+    "title": {
+      "english": "Medicine (Kitab Al-Tibb)",
+      "arabic": " كتاب الطب "
+    }
+  },
+  {
+    "id": "30",
+    "title": {
+      "english": "Divination and Omens (Kitab Al-Kahanah Wa Al-Tatayyur)",
+      "arabic": "كتاب الكهانة و التطير"
+    }
+  },
+  {
+    "id": "31",
+    "title": {
+      "english": "The Book of Manumission of Slaves",
+      "arabic": " كتاب العتق "
+    }
+  },
+  {
+    "id": "32",
+    "title": {
+      "english": "Dialects and Readings of the Qur'an (Kitab Al-Huruf Wa Al-Qira'at)",
+      "arabic": " كتاب الحروف والقراءات "
+    }
+  },
+  {
+    "id": "33",
+    "title": {
+      "english": "Hot Baths (Kitab Al-Hammam)",
+      "arabic": " كتاب الحمَّام"
+    }
+  },
+  {
+    "id": "34",
+    "title": {
+      "english": "Clothing (Kitab Al-Libas)",
+      "arabic": " كتاب اللباس "
+    }
+  },
+  {
+    "id": "35",
+    "title": {
+      "english": "Combing the Hair (Kitab Al-Tarajjul)",
+      "arabic": " كتاب الترجل "
+    }
+  },
+  {
+    "id": "36",
+    "title": {
+      "english": "Signet-Rings (Kitab Al-Khatam)",
+      "arabic": " كتاب الخاتم "
+    }
+  },
+  {
+    "id": "37",
+    "title": {
+      "english": "Trials and Fierce Battles (Kitab Al-Fitan Wa Al-Malahim)",
+      "arabic": " كتاب الفتن والملاحم "
+    }
+  },
+  {
+    "id": "38",
+    "title": {
+      "english": "The Promised Deliverer (Kitab Al-Mahdi)",
+      "arabic": " كتاب المهدى "
+    }
+  },
+  {
+    "id": "39",
+    "title": {
+      "english": "Battles (Kitab Al-Malahim)",
+      "arabic": " كتاب الملاحم "
+    }
+  },
+  {
+    "id": "40",
+    "title": {
+      "english": "Prescribed Punishments (Kitab Al-Hudud)",
+      "arabic": " كتاب الحدود "
+    }
+  },
+  {
+    "id": "41",
+    "title": {
+      "english": "Types of Blood-Wit (Kitab Al-Diyat)",
+      "arabic": " كتاب الديات "
+    }
+  },
+  {
+    "id": "42",
+    "title": {
+      "english": "Model Behavior of the Prophet (Kitab Al-Sunnah)",
+      "arabic": " كتاب السنة "
+    }
+  },
+  {
+    "id": "43",
+    "title": {
+      "english": "General Behavior (Kitab Al-Adab)",
+      "arabic": " كتاب الأدب "
+    }
+  }
+]

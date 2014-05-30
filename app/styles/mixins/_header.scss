@@ -1,0 +1,194 @@
+::-webkit-input-placeholder {
+  color: $color-text-3;
+}
+
+:-moz-placeholder {
+  color: $color-text-3;
+}
+
+::-moz-placeholder {
+  color: $color-text-3;
+}
+
+:-ms-input-placeholder {
+  color: $color-text-3;
+}
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(#fff, .95);
+  overflow: hidden;
+  transition: all .3s ease;
+  box-shadow: none;
+
+  &.headroom--not-top {
+    box-shadow: 0 2px 2px rgba(#000, .1);
+  }
+
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+    box-shadow: none;
+  }
+
+  .container {
+    @include outer-container;
+  }
+
+  .left {
+    @include span-columns(9);
+    @include pad(1em $padding);
+  }
+
+  .right {
+    @include span-columns(3);
+    @include omega;
+    @include pad(1em $padding);
+
+    text-align: right;
+  }
+
+  h1, ul {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-weight: 900;
+    a {
+      color: $color-primary;
+    }
+  }
+
+  ul.nav {
+    @include scut-list-divided('/');
+
+    color: $color-text-3;
+
+    float: right;
+    margin: 0;
+
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .5px;
+    line-height: 1;
+    font-weight: 400;
+
+    li.active a {
+      color: $color-primary;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+}
+
+header.title {
+  position: fixed;
+  width: 100%;
+  z-index: 80;
+  transform: translateY(-100%);
+  transition: all .5s ease;
+
+  &.headroom--unpinned {
+    transform: translateY(0);
+  }
+
+  .container {
+    @include outer-container;
+  }
+
+  .row {
+    @include span-columns(4);
+    @include shift(8);
+    @include pad(1em $padding);
+
+    @include linear-gradient(to bottom, $color-bg 80%, rgba($color-bg, 0) 100%);
+    background-color: transparent;
+
+    text-align: right;
+
+    h2 {
+      margin: 0 0 10px;
+      color: $color-text-1;
+      font-size: 2.5em;
+      line-height: .8;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      font-weight: 400;
+      margin: 0;
+      color: $color-text-2;
+      line-height: .9;
+      letter-spacing: -1px;
+
+      .pill {
+        font-size: .6em;
+        top: -5px;
+        position: relative;
+      }
+    }
+
+    a.pill-inverse {
+      margin: 0;
+      font-weight: 600;
+      float: right;
+      margin-left: 5px;
+
+      &:hover {
+        background: $color-primary;
+        color: $color-bg;
+      }
+    }
+  }
+}
+
+header form.search-box {
+  margin: 0;
+  padding: 0;
+  line-height: .8;
+  font-size: .8em;
+
+  a {
+    position: relative;
+    display: inline-block;
+    z-index: 1000;
+  }
+
+  input[type=text] {
+    position: relative;
+    display: inline-block;
+    z-index: 500;
+    line-height: 1;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    margin-right: 4px;
+    width: 70%;
+    color: $color-text-2;
+    text-align: right;
+    outline: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: visibility 0s .2s ease, all .2s ease;
+  }
+
+  &.focused {
+    a {
+      color: $color-primary;
+    }
+
+    input {
+      opacity: 1;
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+}
+

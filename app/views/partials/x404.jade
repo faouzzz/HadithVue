@@ -1,0 +1,8 @@
+section.x404-view(ng-controller="CollectionListController")
+  .wrapper
+    h1 {{appName}}
+    h2.error Subhanallah. The link was not found.
+
+    ul.nav
+      li(ng-repeat="item in collections track by $index")
+        a(ng-href="{{item.link}}") {{item.title_en}}

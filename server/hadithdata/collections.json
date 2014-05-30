@@ -1,0 +1,49 @@
+{
+  "codes": [
+    "bukhari",
+    "muslim",
+    "nasai",
+    "abudawud",
+    "tirmidhi",
+    "ibnmajah",
+    "malik",
+    "nawawi40",
+    "riyadussaliheen",
+    "adab",
+    "qudsi40",
+    "shamail",
+    "bulugh"
+  ],
+  "titles": {
+    "english": {
+      "bukhari": "Sahih al-Bukhari",
+      "muslim": "Sahih Muslim",
+      "nasai": "Sunan an-Nasa'i",
+      "abudawud": "Sunan Abi Dawud",
+      "tirmidhi": "Jami' at-Tirmidhi",
+      "ibnmajah": "Sunan Ibn Majah",
+      "malik": "Muwatta Malik",
+      "nawawi40": "40 Hadith Nawawi",
+      "riyadussaliheen": "Riyad as-Salihin",
+      "adab": "Al-Adab Al-Mufrad",
+      "qudsi40": "40 Hadith Qudsi",
+      "shamail": "Shama'il Muhammadiyah",
+      "bulugh": "Bulugh al-Maram"
+    },
+    "arabic": {
+      "bukhari": "صحيح البخاري",
+      "muslim": "صحيح مسلم",
+      "nasai": "سنن النسائي",
+      "abudawud": "سنن أبي داود",
+      "tirmidhi": "جامع الترمذي",
+      "ibnmajah": "سنن ابن ماجه",
+      "malik": "موطأ مالك",
+      "nawawi40": "الأربعون النووية",
+      "riyadussaliheen": "رياض الصالحين",
+      "adab": "الأدب المفرد",
+      "qudsi40": "الحديث القدسي",
+      "shamail": "الشمائل المحمدية",
+      "bulugh": "بلوغ المرام"
+    }
+  }
+}

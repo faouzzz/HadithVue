@@ -1,0 +1,56 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body, .main {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  // background: $color-primary;
+  font-family: $default-fonts;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $color-text;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $color-text-2;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.pill {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 4px;
+  font-size: .8em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: $color-primary;
+  color: $color-bg;
+  border: 1px solid $color-primary;
+}
+
+.pill-inverse {
+  @extend .pill;
+  background: $color-bg;
+  color: $color-primary;
+}
+
+.main {
+  min-height: 100%;
+}

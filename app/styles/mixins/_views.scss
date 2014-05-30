@@ -1,0 +1,268 @@
+section.hadith-view {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+
+  .container {
+    @include outer-container;
+    height: 100%;
+  }
+
+  .content {
+    @include span-columns(8);
+    @include pad(7em $padding);
+
+    p:first-of-type {
+      margin-top: 0;
+    }
+
+    .hadith {
+      margin: 4em 0;
+
+      .hadith-text {
+        text-align: justify;
+
+        p:first-of-type {
+          color: $color-text-2;
+          font-size: 1.3em;
+          line-height: 1;
+          letter-spacing: -1px;
+        }
+        p:last-of-type {
+          color: inherit;
+          font-size: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+        }
+
+        .title-saw {
+          font-size: 1.3em;
+          line-height: .1;
+        }
+      }
+
+      &.lang-arabic .hadith-text {
+        font-family: 'droidnaskh';
+        line-height: 2;
+      }
+
+      .hadith-number {
+        $color: $color-text;
+        display: block;
+        float: left;
+        margin: 0 10px 10px 0;
+        padding: 0 12px 0 10px;
+        background: tint($color, 85);
+        color: $color;
+        border-radius: 3px;
+        text-align: center;
+
+        .number {
+          font-weight: 100;
+          font-size: 2em;
+          letter-spacing: -3px;
+        }
+
+        .grade {
+          @extend .pill;
+          display: block;
+          margin: 0 -12px 0 -10px;
+          font-weight: 600;
+          font-size: .7rem;
+          letter-spacing: 1px;
+          background: $color;
+          border-radius: 0 0 3px 3px;
+          border: none;
+          box-shadow: 0 -1px 0 $color-bg;
+          max-width: 200px;
+        }
+      }
+
+      .hadith-bab {
+        // margin-top: 8em;
+
+        .hadith-bab-text {
+          display: block;
+          margin: 0 0 1em 1em;
+          font-size: 1.5em;
+          font-weight: 300;
+          line-height: .9;
+          width: 40%;
+          float: right;
+
+          .hadith-bab-number {
+            color: $color-primary;
+            font-weight: 400;
+            // padding-right: .3em;
+          }
+
+          .hadith-bab-name {
+            color: tint($color-primary, 30);
+            letter-spacing: -1px;
+
+            &:before {
+              content: "\2014";
+            }
+          }
+        }
+
+        &.big .hadith-bab-text {
+          font-size: 1.8em;
+        }
+      }
+
+      &:first-child {
+        margin-top: 0;
+
+        .hadith-bab {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    @include span-columns(4);
+    @include omega;
+    // @include pad(7em $padding);
+
+    // height: 100%;
+    // overflow-y: scroll;
+    text-align: right;
+
+    .wrapper {
+      padding: 7em $padding;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: $color-text-1;
+      font-size: 3em;
+      line-height: .8;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: 400;
+      margin: 0;
+      color: $color-text-2;
+      line-height: .9;
+      letter-spacing: -1px;
+
+      .pill {
+        font-size: .5em;
+        top: -5px;
+        position: relative;
+      }
+    }
+
+    h4 {
+      font-size: 1.8em;
+      margin: 0;
+      margin-bottom: .5em;
+      color: $color-text-2;
+    }
+
+    input[type=text] {
+      border: none;
+      text-align: right;
+      font-size: .9em;
+      margin-top: 1em;
+      padding: 3px 0;
+      width: 100%;
+      outline: none;
+
+      &:hover, &:focus {
+        box-shadow: 0 2px 0 $color-text-4;
+      }
+    }
+
+    ul.nav {
+      @include scut-list-unstyled;
+      font-size: .9em;
+      line-height: 1;
+      letter-spacing: -.5px;
+      margin-top: 1em;
+
+      li {
+        margin-bottom: 8px;
+        a {
+          color: $color-text-2;
+          .pill-inverse {
+            font-weight: 900;
+            padding: 1px 3px 0;
+            line-height: 1;
+            // border-radius: 2px;
+            font-size: .7em;
+            border: 1px solid $color-text-2;
+            background: $color-bg;
+            color: $color-text-2;
+            transition: all .3s ease;
+          }
+
+          &:hover {
+            color: $color-text;
+            .pill-inverse {
+              border-color: $color-text;
+              color: $color-text;
+            }
+          }
+        }
+      }
+      li.active a {
+        color: $color-primary;
+        font-weight: 600;
+        .pill-inverse {
+          border-color: $color-primary;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+section.home-view, section.x404-view {
+  @include outer-container;
+  height: 100%;
+  text-align: right;
+
+  .wrapper {
+    @include span-columns(11);
+    @include pad(0 $padding);
+
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: 0;
+    font-weight: 900;
+    color: $color-text-1;
+  }
+
+  .error {
+    $color-error: #ee245b;
+    display: inline-block;
+    color: $color-error;
+    font-size: 1.8em;
+    letter-spacing: -1px;
+    border-bottom: 10px solid tint($color-error, 70);
+  }
+
+  ul.nav {
+    @include scut-list-unstyled;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
+
+section.home-view, section.x404-view {
+  .wrapper {
+    padding: 7em $padding;
+  }
+}

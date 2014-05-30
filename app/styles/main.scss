@@ -1,0 +1,47 @@
+@import 'fonts/typekit.css';
+// @import 'fonts/typekit-unused.css';
+@import 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic';
+
+// ===========================================================================
+// VARS
+
+// Grid settings
+$column: 90px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: 1200px;
+
+// Breakpoints
+$tablet: new-breakpoint(max-width 768px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+@import 'bourbon';
+@import 'neat-helpers';
+@import 'neat';
+@import 'scut';
+@import 'toolkit';
+
+
+// COLORS/FONTS
+
+// Colors
+$color-bg: #fff;
+$color-text: #4a4f4c;
+$color-text-1: tint($color-text, 15);
+$color-text-2: tint($color-text, 45);
+$color-text-3: tint($color-text, 75);
+$color-text-4: tint($color-text, 90);
+$color-primary: #26a658;
+$color-secondary: #61d0d4;
+
+// Fonts & Misc
+$default-fonts: 'Museo Sans Cond', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $default-fonts: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-fonts: 'Museo Sans Cond', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$padding: 20px;
+
+@import 'mixins/mixins';
+@import 'mixins/base';
+@import 'mixins/header';
+@import 'mixins/views';
+@import 'mixins/footer';

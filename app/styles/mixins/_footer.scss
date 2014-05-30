@@ -1,0 +1,65 @@
+footer {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color-primary;
+  color: $color-bg;
+  font-weight: 600;
+  font-size: .8em;
+
+  &.show {
+    transform: translateY(0);
+  }
+
+  a {
+    color: $color-bg;
+    &:hover {
+      color: tint($color-primary, 60);
+    }
+  }
+
+  .container {
+    @include outer-container;
+  }
+
+  .pill {
+    background: $color-bg;
+    color: $color-primary;
+    border: 1px solid $color-bg;
+    font-size: .75em;
+    line-height: .8;
+    padding: 2px 3px;
+    font-weight: 900;
+  }
+
+  .prev {
+    @include span-columns(4);
+    @include pad(.8em $padding);
+  }
+
+  .info {
+    @include span-columns(4);
+    @include pad(.8em $padding);
+    text-align: center;
+
+    .pill-info {
+      @extend .pill;
+      background: $color-primary;
+      border-color: tint($color-primary, 60);
+      color: tint($color-primary, 60);
+      margin: 0;
+      font-weight: 600;
+    }
+
+  }
+
+  .next {
+    @include span-columns(4);
+    @include pad(.8em $padding);
+    @include omega;
+
+    text-align: right;
+  }
+}

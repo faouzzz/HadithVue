@@ -1,0 +1,104 @@
+doctype html
+// [if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]
+// [if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]
+// [if IE 8]><html class="no-js lt-ie9"><![endif]
+// [if gt IE 8]><!
+html.no-js
+  //<![endif]
+
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    base(href="/")
+    title HadithVue
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width")
+
+    <!-- build:css(app) styles/vendor.css -->
+    link(rel="stylesheet" href="bower/angular-loading-bar/build/loading-bar.css")
+    link(rel="stylesheet" href="bower/normalize.css/normalize.css")
+    link(rel="stylesheet" href="bower/fontawesome/css/font-awesome.css")
+    //- link(rel="stylesheet" href="bower/animate.css/animate.css")
+    <!-- endbuild -->
+
+    style.
+      [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak { display: none !important; }
+      #loading-bar .bar { background: #26a658; }
+      #loading-bar .peg { box-shadow: #26a658 1px 0 6px 1px; }
+      #loading-bar-spinner .spinner-icon { border-top-color: #26a658; border-left-color: #26a658; }
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    link(rel="stylesheet" href="styles/main.css")
+    <!-- endbuild -->
+
+    script(src="bower/modernizr/modernizr.js")
+
+  body(ng-app="HadithVue" ng-cloak)
+    //[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+      <![endif]
+    //[if lt IE 9]>
+      <script src="bower/es5-shim/es5-shim.js"></script>
+      <script src="bower/json3/lib/json3.min.js"></script>
+      <![endif]
+
+    .main(ng-controller="MainController" ui-view)
+
+    <!-- build:js(app) scripts/vendor.js -->
+    script(src="bower/jquery/dist/jquery.js")
+    script(src="bower/lodash/dist/lodash.js")
+
+    script(src="bower/angular/angular.js")
+    script(src="bower/angular-resource/angular-resource.js")
+    script(src="bower/angular-sanitize/angular-sanitize.js")
+    script(src="bower/angular-route/angular-route.js")
+
+    script(src="bower/angular-ui-router/release/angular-ui-router.js")
+    script(src="bower/angular-ui-utils/ui-utils.js")
+
+    script(src="bower/angular-cache/dist/angular-cache.js")
+    script(src="bower/angular-fontawesome/dist/angular-fontawesome.js")
+    script(src="bower/angular-loading-bar/build/loading-bar.js")
+    script(src="bower/headroom.js/dist/headroom.js")
+    script(src="bower/headroom.js/dist/angular.headroom.js")
+
+    script(src="bower/velocity/jquery.velocity.js")
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- base -->
+    script(src="scripts/app.js")
+    script(src="scripts/interceptors/dispatcher.js")
+
+    <!-- factories -->
+    script(src="scripts/factories/utils.js")
+    script(src="scripts/factories/formatter.js")
+    script(src="scripts/factories/misc.js")
+
+    <!-- services -->
+    script(src="scripts/services/collection.js")
+    script(src="scripts/services/book.js")
+    script(src="scripts/services/hadith.js")
+
+    <!-- directives -->
+    script(src="scripts/directives/hadith.js")
+    script(src="scripts/directives/inf-scroll.js")
+    script(src="scripts/directives/effects.js")
+
+    <!-- filters -->
+    script(src="scripts/filters/filters.js")
+
+    <!-- controllers -->
+    script(src="scripts/controllers/main.js")
+    script(src="scripts/controllers/collection-list.js")
+    script(src="scripts/controllers/book-list.js")
+    script(src="scripts/controllers/hadith-view.js")
+    script(src="scripts/controllers/search-view.js")
+    <!-- endbuild -->
+
+    //- // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //- script.
+    //-   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    //-   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    //-   g.src='//www.google-analytics.com/ga.js';
+    //-   s.parentNode.insertBefore(g,s)}(document,'script'));

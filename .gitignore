@@ -1,0 +1,11 @@
+node_modules
+./**/node_modules
+public
+.tmp
+.sass-cache
+app/bower
+heroku
+/views
+dist
+./**/*.db
+./**/*.sql

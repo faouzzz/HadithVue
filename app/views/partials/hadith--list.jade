@@ -1,0 +1,14 @@
+.inner(inf-scroll="hadith.loadMore()" inf-scroll-distance="400")
+  .hadith(ng-repeat="hadith in hadith.items track by $index" class="lang-{{language}}" )
+    .hadith-bab(ng-if="showBab($index)")
+      span.hadith-bab-text
+        span.hadith-bab-number Ch. {{hadith.bab_number}}
+        span.hadith-bab-name(ng-bind-html="hadith.bab_name | babname")
+
+    .hadith-number
+      span.number {{$index+1}}
+      span.grade(ng-if="hadith.grade_1" ng-bind-html="hadith.grade_1")
+      span.grade(ng-if="hadith.grade_2" ng-bind-html="hadith.grade_2")
+
+    //- span.hadith-number(ng-if="hadith.hadith_number != 0") {{hadith.hadith_number}}
+    .hadith-text(ng-bind-html="hadith.hadith_text")

@@ -1,0 +1,17 @@
+div(ui-view="header")
+//- hadith-header(ng-controller="CollectionListController")
+
+section.hadith-view
+  .container
+    .content
+      .wrapper
+        div(ui-view)
+        //- hadith-list(ng-controller="HadithListController")
+
+    .sidebar
+      .wrapper
+        div(ui-view="sidebar")
+        //- hadith-sidebar(ng-controller="BookListController")
+
+//- hadith-footer(ng-controller="BookListController")
+div(ui-view="footer")

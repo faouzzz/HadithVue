@@ -1,0 +1,16 @@
+hadith-header(ng-controller="CollectionListController")
+section.search-view.hadith-view
+  .container
+    .content
+      .wrapper
+        .test(ng-repeat="item in items")
+          {{item.collection}}
+          {{item.book_id}}
+          {{item.book_name}}
+          {{item.bab_number}}
+          {{item.bab_name}}
+        //- hadith-list(ng-controller="HadithListController")
+    //- .sidebar
+    //-   .wrapper
+    //-     hadith-sidebar(ng-controller="BookListController")
+//- hadith-footer(ng-controller="BookListController")
