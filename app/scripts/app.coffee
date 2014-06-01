@@ -36,6 +36,7 @@
       templateUrl: 'partials/hadith--footer'
       controller: 'BookListController'
 
+  # TODO: add resolves.
   $stateProvider
     .state 'home',
       url: '/'
