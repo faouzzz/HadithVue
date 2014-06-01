@@ -3,6 +3,7 @@ node_modules
 public
 .tmp
 .sass-cache
+.idea
 app/bower
 heroku
 /views

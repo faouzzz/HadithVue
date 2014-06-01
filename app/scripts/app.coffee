@@ -2,22 +2,24 @@
 
 # initialize app
 @app = angular.module('HadithVue', [
-  'ngResource'
   'ngSanitize'
-  'ngRoute'
+  # 'ngResource'
+  # 'ngRoute'
+  'ngAnimate'
 
   # others
   'ui.router'
-  'ui.utils'
   'angular-data.DSCacheFactory'
   'picardy.fontawesome'
   'angular-loading-bar'
   'headroom'
 ])
 
-# cofigurations
-.config ['$stateProvider', '$urlRouterProvider'
-($stateProvider, $urlRouterProvider) ->
+# ui-router cofigurations
+.config ['$stateProvider', '$urlRouterProvider', '$locationProvider',
+($stateProvider, $urlRouterProvider, $locationProvider) ->
+  $locationProvider.html5Mode true
+
   $urlRouterProvider.otherwise '/'
 
   hadith_views =
@@ -35,7 +37,7 @@
       controller: 'BookListController'
 
   $stateProvider
-    .state 'index',
+    .state 'home',
       url: '/'
       templateUrl: 'partials/home'
       controller: 'CollectionListController'
@@ -55,34 +57,14 @@
       views: hadith_views
 ]
 
-.config ['$routeProvider', '$locationProvider',
-($routeProvider, $locationProvider) ->
-  # $routeProvider
-
-  #   .when '/',
-  #     templateUrl: 'partials/home'
-
-  #   .when "/hadith/:collection/:book_id?",
-  #     templateUrl: 'partials/hadith'
-  #     controller: 'HadithViewController'
-
-  #   .when "/search",
-  #     templateUrl: 'partials/search'
-  #     controller: 'SearchViewController'
-
-  #   .otherwise
-  #     templateUrl: 'partials/x404'
-
-  $locationProvider.html5Mode true
-]
-
 .config ['cfpLoadingBarProvider',
 (cfpLoadingBarProvider) ->
   cfpLoadingBarProvider.includeSpinner = false
 ]
 
 # vars
-.value 'appName', 'HadithVue'
+.value 'config',
+  appName: 'HadithVue'
 
 # run app
 .run ['$rootScope', '$http', '$state', '$stateParams', 'DSCacheFactory'
@@ -91,23 +73,9 @@
   $rootScope.$stateParams = $stateParams
 
   DSCacheFactory 'ivCache',
-    maxAge: 900000 # Items added to this cache expire after 15 minutes.
-    cacheFlushInterval: 6000000 # This cache will clear itself every hour.
-    deleteOnExpire: 'aggressive' # Items will be deleted from this cache right when they expire.
+    maxAge: 900000
+    cacheFlushInterval: 6000000
+    deleteOnExpire: 'aggressive'
 
   $http.defaults.cache = DSCacheFactory.get 'ivCache'
 ]
-
-# @$DI = (arrayStr, fn) ->
-#   args = Array::slice.call(arguments)
-#   if args.length is 1 and typeof args[0] is 'function'
-#     args[0]
-#   else if args.length > 2 and typeof args[args.length - 1] is 'function'
-#     args
-#   else
-#     arrayStr.toString().trim().split(/\s+/).concat(fn)
-
-# # monkey-patch angular methods
-# ['config', 'factory', 'directive', 'filter', 'run', 'controller', 'provider', 'service', 'animation'].forEach (method) ->
-#   app["#{method}_DI"] = ->
-#     app[method] $DI.apply(app, Array::slice.call(arguments))

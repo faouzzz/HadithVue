@@ -3,8 +3,8 @@
 @app
 
 .controller 'SearchViewController',
-['$scope', '$location', '$route', '$routeParams', '$http', 'collectionService', 'bookId',
-($scope, $location, $route, $routeParams, $http, collectionService, bookId) ->
+['$scope', '$location', '$http', 'collectionService', 'bookId',
+($scope, $location, $http, collectionService, bookId) ->
 
   $scope.collection = $routeParams.collection
   $scope.book_id    = bookId.first $routeParams.book_id, $scope.collection

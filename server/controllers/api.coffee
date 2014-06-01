@@ -84,7 +84,7 @@ module.exports = (app) ->
               ['collection_code = ?', collection],
               ['book_id LIKE ?', book_id]
             )
-          limit: 10
+          limit: 20
           offset: after
 
         .complete (err, data) ->

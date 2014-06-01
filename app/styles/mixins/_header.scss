@@ -90,7 +90,7 @@ header.title {
   width: 100%;
   z-index: 80;
   transform: translateY(-100%);
-  transition: all .5s ease;
+  transition: all .3s ease;
 
   &.headroom--unpinned {
     transform: translateY(0);
