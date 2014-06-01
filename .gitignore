@@ -10,3 +10,4 @@ heroku
 dist
 ./**/*.db
 ./**/*.sql
+.DS_Store
