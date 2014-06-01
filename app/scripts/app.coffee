@@ -22,7 +22,7 @@
 
   $urlRouterProvider.otherwise '/'
 
-  hadith_views =
+  hadithViews =
     '':
       templateUrl: 'partials/hadith--list'
       controller: 'HadithListController'
@@ -50,11 +50,11 @@
 
     .state 'hadith.bookid',
       url: '/:collection/:book_id'
-      views: hadith_views
+      views: hadithViews
 
     .state 'hadith.nobookid',
       url: '/:collection'
-      views: hadith_views
+      views: hadithViews
 ]
 
 .config ['cfpLoadingBarProvider',
