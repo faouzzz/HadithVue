@@ -3,8 +3,8 @@
 @app
 
 .controller 'CollectionListController',
-['$rootScope', '$scope', 'collectionService', 'bookId',
-($rootScope, $scope, collectionService, bookId) ->
+['$rootScope', '$scope', 'collectionService',
+($rootScope, $scope, collectionService) ->
 
   $scope.isActive = (col) -> col is $scope.$stateParams.collection
 

@@ -6,7 +6,7 @@ class Service
   info: null
   collection: null
 
-  constructor: (@$rootScope, @$http, @$location, @bookId) ->
+  constructor: (@$rootScope, @$http, @$location, @utils) ->
 
   get: (callback = ->) ->
     @$http.get('/v3/collection').then (result) =>
@@ -17,9 +17,9 @@ class Service
           title_en: coll.title_en
           link: "/hadith/#{coll.code}"
           code: coll.code
-          first_book: @bookId.first null, coll.code
+          first_book: @utils.firstBookId null, coll.code
 
       callback @
       @$rootScope.$broadcast('doneLoading', 'collection')
 
-@app.service 'collectionService', ['$rootScope', '$http', '$location' , 'bookId', Service]
+@app.service 'collectionService', ['$rootScope', '$http', '$location' , 'utils', Service]

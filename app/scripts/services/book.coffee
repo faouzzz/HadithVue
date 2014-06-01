@@ -10,7 +10,7 @@ class Service
   collection: null
   book_id: null
 
-  constructor: (@$rootScope, @$http, @formatter, @bookId) ->
+  constructor: (@$rootScope, @$http, @formatter, @utils) ->
 
   get: (collection, book_id, callback = ->) ->
     @$http.get("/v3/book/#{collection}").success (data) =>
@@ -47,7 +47,7 @@ class Service
         index = _.findIndex @items, (bk) =>
           # immediately return first index if book is 0
           return true if book_id is '-1'
-          @bookId.equal(bk.book_id, book_id)
+          @utils.equalBookId(bk.book_id, book_id)
 
         @info.current = @items[index]
         @info.prev = @items[index - 1] ? null
@@ -59,4 +59,4 @@ class Service
       callback @
       @$rootScope.$broadcast('doneLoading', 'book')
 
-@app.service 'bookService', ['$rootScope', '$http', 'formatter', 'bookId', Service]
+@app.service 'bookService', ['$rootScope', '$http', 'formatter', 'utils', Service]

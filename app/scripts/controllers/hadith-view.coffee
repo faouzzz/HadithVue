@@ -4,8 +4,11 @@
 
 # The parent controller
 .controller 'HadithViewController',
-['$rootScope', '$scope', '$location',
-($rootScope, $scope, $location) ->
+['$rootScope', '$scope', '$location', 'utils',
+($rootScope, $scope, $location, utils) ->
+  # check collection validity
+  unless utils.collectionExists $scope.$stateParams.collection
+    $scope.$emit 'invalidCollection'
 
   # bind to scope
   $scope.info =
@@ -13,17 +16,15 @@
     book: {}
 
   $scope.hadith = {}
-
-  # $scope.$on 'responseError', (event, error) -> $location.path('/404')
 ]
 
 # The hadith list controller
 .controller 'HadithListController',
-['$scope', '$location', 'hadithService', 'bookId',
-($scope, $location, hadithService, bookId) ->
+['$scope', '$location', 'hadithService', 'utils',
+($scope, $location, hadithService, utils) ->
 
   collection = $scope.$stateParams.collection
-  book_id    = bookId.first $scope.$stateParams.book_id, collection
+  book_id    = utils.firstBookId $scope.$stateParams.book_id, collection
   language   = $scope.$stateParams.language ? 'english'
 
   # functions

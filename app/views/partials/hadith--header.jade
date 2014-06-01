@@ -4,7 +4,7 @@
       .left
         ul.nav
           li(ng-repeat="item in collections track by $index" ng-class="{active: isActive(item.code)}")
-            a(ui-sref="hadith.bookid({collection: item.code, book_id: item.first_book})" back-top) {{item.title_en}}
+            a(ui-sref="hadith.nobookid({collection: item.code, book_id: item.first_book})") {{item.title_en}}
 
       .right
         h1

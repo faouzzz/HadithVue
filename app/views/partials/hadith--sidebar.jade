@@ -12,6 +12,6 @@ aside
 
       li(ng-repeat="item in books track by $index" ng-class="{active: isActive(item.collection, item.book_id)}")
         //- a(ng-href="{{item.link}}" back-top)
-        a(ui-sref="hadith.bookid({collection: item.collection, book_id: item.book_id})" back-top)
+        a(ui-sref="hadith.bookid({collection: item.collection, book_id: item.book_id})")
           span(ng-bind-html="item.book_name")
           span.pill-inverse(ng-if="item.part_num") Part {{item.part_num}}

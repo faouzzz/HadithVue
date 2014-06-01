@@ -3,13 +3,15 @@
 @app
 
 # animate links scroll to top
-.directive 'backTop', ['$timeout', '$location', 'domFx', ($timeout, $location, domFx) ->
+.directive 'backTop',
+['$timeout', '$location', 'domFx',
+($timeout, $location, domFx) ->
   restrict: 'A'
   link: (scope, elm, attr) ->
     elm.click (ev) ->
+      domFx.scrollTop()
       if attr.href is '#' or attr.href is '#top'
         ev.preventDefault()
-        domFx.scrollTop()
 ]
 
 

@@ -1,5 +1,5 @@
 .inner(inf-scroll="hadith.loadMore()" inf-scroll-distance="400")
-  .hadith(ng-repeat="hadith in hadith.items track by $index" class="lang-{{language}}" )
+  .hadith(ng-repeat="hadith in hadith.items track by $index" class="lang-{{language}} ng-trans ng-trans-fade-left")
     .hadith-bab(ng-if="showBab($index)")
       span.hadith-bab-text
         span.hadith-bab-number Ch. {{hadith.bab_number}}

@@ -16,10 +16,6 @@
 # ui-router configurations
 .config ['$stateProvider', '$urlRouterProvider', '$locationProvider',
 ($stateProvider, $urlRouterProvider, $locationProvider) ->
-  $locationProvider.html5Mode true
-
-  $urlRouterProvider.otherwise '/'
-
   hadithViews =
     '':
       templateUrl: 'partials/hadith--list'
@@ -54,6 +50,14 @@
     .state 'hadith.nobookid',
       url: '/:collection'
       views: hadithViews
+
+    # 404 state
+    .state 'x404',
+      templateUrl: 'partials/x404'
+
+  $locationProvider.html5Mode true
+
+  $urlRouterProvider.otherwise '/'
 ]
 
 .config ['cfpLoadingBarProvider',

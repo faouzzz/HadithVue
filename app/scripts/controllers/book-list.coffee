@@ -4,18 +4,18 @@
 
 # Book list controller
 .controller 'BookListController',
-['$scope', '$location', '$timeout', 'collectionService', 'bookService', 'bookId',
-($scope, $location, $timeout, collectionService, bookService, bookId) ->
+['$scope', '$location', '$timeout', 'collectionService', 'bookService', 'utils',
+($scope, $location, $timeout, collectionService, bookService, utils) ->
 
   collection = $scope.$stateParams.collection
-  book_id    = bookId.first $scope.$stateParams.book_id, collection
+  book_id    = utils.firstBookId $scope.$stateParams.book_id, collection
   language   = $scope.$stateParams.language ? 'english'
 
   $scope.isActive = (col, id) ->
     collection = $scope.$stateParams.collection
-    book_id    = bookId.first $scope.$stateParams.book_id, collection
+    book_id    = utils.firstBookId $scope.$stateParams.book_id, collection
 
-    col is collection and bookId.equal(id, book_id)
+    col is collection and utils.equalBookId(id, book_id)
 
   bookService.get collection, book_id, (srv) ->
     $scope.info.book = srv.info
