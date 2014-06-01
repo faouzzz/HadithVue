@@ -15,7 +15,7 @@
   'headroom'
 ])
 
-# ui-router cofigurations
+# ui-router configurations
 .config ['$stateProvider', '$urlRouterProvider', '$locationProvider',
 ($stateProvider, $urlRouterProvider, $locationProvider) ->
   $locationProvider.html5Mode true
