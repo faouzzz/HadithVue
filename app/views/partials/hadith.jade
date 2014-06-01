@@ -1,11 +1,11 @@
-div(ui-view="header")
+.header-container(ui-view="header")
 //- hadith-header(ng-controller="CollectionListController")
 
 section.hadith-view
   .container
     .content
       .wrapper
-        div(ui-view)
+        div(ui-view class="ng-trans ng-trans-fade")
         //- hadith-list(ng-controller="HadithListController")
 
     .sidebar
@@ -14,4 +14,4 @@ section.hadith-view
         //- hadith-sidebar(ng-controller="BookListController")
 
 //- hadith-footer(ng-controller="BookListController")
-div(ui-view="footer")
+.footer-container(ui-view="footer")

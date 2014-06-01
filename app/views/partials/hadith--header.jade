@@ -1,27 +1,26 @@
-.header-container
-  header.navbar(headroom offset="250")
-    .container
-      .left
-        ul.nav
-          li(ng-repeat="item in collections track by $index" ng-class="{active: isActive(item.code)}")
-            a(ui-sref="hadith.nobookid({collection: item.code, book_id: item.first_book})") {{item.title_en}}
+header.navbar(headroom offset="250")
+  .container
+    .left
+      ul.nav
+        li(ng-repeat="item in collections track by $index" ng-class="{active: isActive(item.code)}")
+          a(ui-sref="hadith.nobookid({collection: item.code, book_id: item.first_book})") {{item.title_en}}
 
-      .right
-        h1
-          a(href="/") {{appName}}
-        search-box
+    .right
+      h1
+        a(href="/") {{appName}}
+      search-box
 
-  header.title(headroom offset="250")
-    .container
-      .row
-        h3
-          span(ng-bind-html="info.book.current.book_name | bookname")
-          span.pill(ng-if="info.book.current.part_num") Part {{info.book.current.part_num}}
+header.title(headroom offset="250")
+  .container
+    .row
+      h3
+        span(ng-bind-html="info.book.current.book_name | bookname")
+        span.pill(ng-if="info.book.current.part_num") Part {{info.book.current.part_num}}
 
-        h2 {{info.collection.title_en}}
+      h2 {{info.collection.title_en}}
 
-        a.pill-inverse(href="#" back-top)
-          | Top&nbsp;
-          fa(name="chevron-up")
+      a.pill-inverse(href="#" back-top)
+        | Top&nbsp;
+        fa(name="chevron-up")
 
-        search-box
+      search-box
