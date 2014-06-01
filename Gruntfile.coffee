@@ -35,6 +35,10 @@ module.exports = (grunt) ->
           script: 'dist/server.coffee'
           node_env: 'production'
 
+    open:
+      server:
+        url: 'http://localhost:<%= express.options.port %>'
+
     watch:
       json:
         files: ['<%= config.app %>/data/{,*/}*.json']
@@ -413,6 +417,7 @@ module.exports = (grunt) ->
       return grunt.task.run([
         'build'
         'express:prod'
+        'open'
         'express-keepalive'
       ])
     if target is 'debug'
@@ -427,6 +432,7 @@ module.exports = (grunt) ->
       'concurrent:server'
       'autoprefixer'
       'express:dev'
+      'open'
       'watch'
     ]
 

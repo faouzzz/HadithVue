@@ -3,8 +3,6 @@
 # initialize app
 @app = angular.module('HadithVue', [
   'ngSanitize'
-  # 'ngResource'
-  # 'ngRoute'
   'ngAnimate'
 
   # others
