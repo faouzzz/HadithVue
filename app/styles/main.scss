@@ -1,6 +1,6 @@
 @import 'fonts/typekit.css';
 // @import 'fonts/typekit-unused.css';
-@import 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic';
+//@import 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic';
 
 // ===========================================================================
 // VARS
@@ -21,7 +21,6 @@ $mobile: new-breakpoint(max-width 480px 4);
 @import 'scut';
 @import 'toolkit';
 
-
 // COLORS/FONTS
 
 // Colors
@@ -35,6 +34,7 @@ $color-primary: #26a658;
 $color-secondary: #61d0d4;
 
 // Fonts & Misc
+//$default-fonts: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $default-fonts: 'Museo Sans Cond', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // $default-fonts: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $heading-fonts: 'Museo Sans Cond', 'Helvetica Neue', Helvetica, Arial, sans-serif;
