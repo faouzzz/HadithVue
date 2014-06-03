@@ -43,12 +43,12 @@
       templateUrl: 'partials/hadith'
       controller: 'HadithViewController'
 
-    .state 'hadith.bookid',
-      url: '/:collection/:book_id'
-      views: hadithViews
-
     .state 'hadith.nobookid',
       url: '/:collection'
+      views: hadithViews
+
+    .state 'hadith.bookid',
+      url: '/:collection/:book_id'
       views: hadithViews
 
     # 404 state
