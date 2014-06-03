@@ -127,8 +127,8 @@ module.exports = (grunt) ->
 
     # Add vendor prefixed styles
     autoprefixer:
-      options:
-        browsers: ['last 1 version']
+      # options:
+      #   browsers: ['last 1 version']
 
       dist:
         files: [

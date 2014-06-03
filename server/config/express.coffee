@@ -31,14 +31,14 @@ module.exports = (app) ->
     app.use express.static path.join(config.root, '.tmp')
     app.use express.static path.join(config.root, 'app')
     app.set 'views', config.root + '/app/views'
-    app.set('json spaces', 2);
+    app.set 'json spaces', 2
 
   if 'production' is env
     app.use compression()
     app.use favicon path.join(config.root, 'public', 'favicon.ico')
     app.use express.static path.join(config.root, 'public')
     app.set 'views', config.root + '/views'
-    app.set('json spaces', 0);
+    app.set 'json spaces', 0
 
   app.set 'view engine', 'jade'
   # app.locals.pretty = true
