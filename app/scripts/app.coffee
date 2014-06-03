@@ -75,10 +75,10 @@
   $rootScope.$state = $state
   $rootScope.$stateParams = $stateParams
 
-  DSCacheFactory 'ivCache',
+  DSCacheFactory 'HadithVueCache',
     maxAge: 900000
     cacheFlushInterval: 6000000
     deleteOnExpire: 'aggressive'
 
-  $http.defaults.cache = DSCacheFactory.get 'ivCache'
+  $http.defaults.cache = DSCacheFactory.get 'HadithVueCache'
 ]
