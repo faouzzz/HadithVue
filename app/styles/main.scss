@@ -1,5 +1,4 @@
 @import 'fonts/typekit.css';
-// @import 'fonts/typekit-unused.css';
 //@import 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic';
 
 // ===========================================================================
@@ -15,9 +14,9 @@ $max-width: 1200px;
 $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
 
-@import 'bourbon';
-@import 'neat-helpers';
-@import 'neat';
+@import 'bourbon/bourbon';
+@import 'neat/neat-helpers';
+@import 'neat/neat';
 @import 'scut';
 @import 'toolkit';
 

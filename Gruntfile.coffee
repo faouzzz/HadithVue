@@ -1,8 +1,6 @@
 'use strict'
 
 module.exports = (grunt) ->
-  _ = require 'lodash'
-
   # Load grunt tasks automatically
   require('load-grunt-tasks') grunt, pattern: [
     'grunt-*',
@@ -68,11 +66,8 @@ module.exports = (grunt) ->
           'karma'
         ]
       compass:
-        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}']
+        files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}', 'config.rb']
         tasks: ['compass:server']
-      # sass:
-      #   files: ['<%= config.app %>/styles/**/*.{scss,sass}']
-      #   tasks: ['sass:dist']
       gruntfile:
         files: ['Gruntfile.coffee']
       livereload:
@@ -151,9 +146,9 @@ module.exports = (grunt) ->
               console.log event.colour
             # opens browser on initial server start
             nodemon.on 'config:update', ->
-              setTimeout (->
+              setTimeout ->
                 require('open') 'http://localhost:8080/debug?port=5858'
-              ), 500
+              , 500
 
     # Compiles Coffeescripts to JS
     coffee:
@@ -177,49 +172,13 @@ module.exports = (grunt) ->
           ext: '.js'
         ]
 
-    # # Compiles Sass to CSS and generates necessary files if requested
-    # sass:
-    #   dist:
-    #     files:
-    #       '<%= config.temp %>/styles/main.css': '<%= config.app %>/styles/main.scss'
-    #     options:
-    #       # grunt-contrib-sass version
-    #       sourcemap: true
-    #       trace: true
-    #       compass: true
-    #       loadPath: _.flatten [
-    #         '<%= config.app %>/bower'
-    #         '<%= config.app %>/bower/bourbon/dist'
-    #         '<%= config.app %>/bower/neat/app/assets/stylesheets'
-    #         '<%= config.app %>/bower/sass-toolkit/stylesheets'
-    #         '<%= config.app %>/bower/scut/dist'
-    #       ]
-
     # Compiles Sass to CSS and generates necessary files if requested
     compass:
       options:
-        sassDir: "<%= config.app %>/styles"
-        cssDir: "<%= config.temp %>/styles"
-        generatedImagesDir: "<%= config.temp %>/images/generated"
-        imagesDir: "<%= config.app %>/images"
-        javascriptsDir: "<%= config.app %>/scripts"
-        fontsDir: "<%= config.app %>/styles/fonts"
-        importPath: _.flatten [
-            '<%= config.app %>/bower'
-            '<%= config.app %>/bower/bourbon/dist'
-            '<%= config.app %>/bower/neat/app/assets/stylesheets'
-            '<%= config.app %>/bower/sass-toolkit/stylesheets'
-            '<%= config.app %>/bower/scut/dist'
-          ]
-        httpImagesPath: "<%= config.app %>/images"
-        httpGeneratedImagesPath: "<%= config.app %>/images/generated"
-        httpFontsPath: "<%= config.app %>/styles/fonts"
-        relativeAssets: false
         assetCacheBuster: true
-        raw: "Sass::Script::Number.precision = 10\n"
       dist:
         options:
-          generatedImagesDir: "<%= config.app %>/images/generated"
+          generatedImagesDir: '<%= config.app %>/images/generated'
       server:
         options:
           debugInfo: false
@@ -297,16 +256,16 @@ module.exports = (grunt) ->
           dest: '<%= config.dist %>/views'
         ]
 
-    # # Allow the use of non-minsafe AngularJS files. Automatically makes it
-    # # minsafe compatible so Uglify does not destroy the ng references
-    # ngmin:
-    #   dist:
-    #     files: [
-    #       expand: true
-    #       cwd: '<%= config.temp %>/concat/scripts'
-    #       src: '*.js'
-    #       dest: '<%= config.temp %>/concat/scripts'
-    #     ]
+    # Allow the use of non-minsafe AngularJS files. Automatically makes it
+    # minsafe compatible so Uglify does not destroy the ng references
+    ngmin:
+       dist:
+         files: [
+           expand: true
+           cwd: '<%= config.temp %>/concat/scripts'
+           src: '*.js'
+           dest: '<%= config.temp %>/concat/scripts'
+         ]
 
     # Replace Google CDN references
     cdnify:
@@ -472,7 +431,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'dist', [
     'newer:jshint'
-    'test'
+#    'test'
     'build'
   ]
 
