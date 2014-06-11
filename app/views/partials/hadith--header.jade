@@ -1,5 +1,9 @@
 header.navbar(headroom offset="250")
   .container
+    .top
+      h1
+        a(href="/") {{appName}}
+
     .left
       ul.nav
         li(ng-repeat="item in collections track by $index" ng-class="{active: isActive(item.code)}")
@@ -8,7 +12,7 @@ header.navbar(headroom offset="250")
     .right
       h1
         a(href="/") {{appName}}
-      search-box
+      //search-box
 
 header.title(headroom offset="250")
   .container
@@ -23,4 +27,4 @@ header.title(headroom offset="250")
         | Top&nbsp;
         fa(name="chevron-up")
 
-      search-box
+      //search-box

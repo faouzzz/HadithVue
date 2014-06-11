@@ -4,13 +4,11 @@
 }
 
 ::-moz-selection {
-  color: #fff;
-  background: $color-primary;
+  background: tint($color-text-1, 90);
 }
 
 ::selection {
-  color: #fff;
-  background: $color-primary;
+  background: tint($color-text-1, 90);
 }
 
 html {

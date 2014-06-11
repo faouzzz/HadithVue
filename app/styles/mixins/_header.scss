@@ -38,9 +38,23 @@ header.navbar {
     @include outer-container;
   }
 
+  .top {
+    display: none;
+    @include media($mobile) {
+      @include span-columns(4);
+      @include pad(1em $padding 0);
+      display: block;
+      text-align: center;
+    }
+  }
+
   .left {
     @include span-columns(9);
     @include pad(1em $padding);
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
   }
 
   .right {
@@ -49,6 +63,10 @@ header.navbar {
     @include pad(1em $padding);
 
     text-align: right;
+
+    @include media($mobile) {
+      display: none;
+    }
   }
 
   h1, ul {
