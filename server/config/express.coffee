@@ -1,6 +1,6 @@
 'use strict'
 express = require 'express'
-favicon = require 'static-favicon'
+favicon = require 'serve-favicon'
 morgan = require 'morgan'
 compression = require 'compression'
 bodyParser = require 'body-parser'
@@ -45,7 +45,8 @@ module.exports = (app) ->
   app.locals.doctype = 'html'
 
   app.use morgan('dev')
-  app.use bodyParser()
+  app.use bodyParser.urlencoded(extended: true)
+  app.use bodyParser.json()
   app.use methodOverride()
 
   # Error handler - has to be last
