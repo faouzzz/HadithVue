@@ -24,7 +24,7 @@ section.hadith-view {
 
         p:first-of-type {
           color: $color-text-2;
-          font-size: 1.3em;
+          font-size: 1.5em;
           line-height: 1;
           letter-spacing: -1px;
         }
@@ -83,12 +83,14 @@ section.hadith-view {
 
         .hadith-bab-text {
           display: block;
-          margin: 0 0 1em 1em;
-          font-size: 1.5em;
+          margin: 0 0 .7em .7em;
+          padding: .3em;
+          font-size: 1.6em;
           font-weight: 300;
           line-height: .9;
           width: 40%;
           float: right;
+          border: 1px solid tint($color-primary, 60);
 
           .hadith-bab-number {
             color: $color-primary;
